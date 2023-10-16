@@ -1,5 +1,7 @@
+GET http://localhost:3000
+
 ### send form :
-POST http://localhost:3000/form/post
+POST 18.182.65.154:3000/form/post
 Content-Type: application/json
 
 {
@@ -13,17 +15,16 @@ Content-Type: application/json
 
 ### CREATE ACCOUNT :
 ### sign up
-POST http://localhost:3000/auth/signup
+POST 18.182.65.154:3000/auth/signup
 Content-Type: application/json
 
 {
-  "email": "hdsvidi@gmail.com",
-  "password": "Acomnn1@"
-
+  "email": "youremail@gmail.com",
+  "password": "NOEDJSjd@02"
 }
 
 ### sign in - get access token
-POST http://localhost:3000/auth/signin
+POST 18.182.65.154:3000/auth/signin
 Content-Type: application/json
 
 {
@@ -33,13 +34,14 @@ Content-Type: application/json
 }
 
 
-### current - cek yourtoken valid
-GET http://localhost:3000/user/current
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NTJjZDc4Njk4MzE3NGFjMDZjNWM5ZWUiLCJlbWFpbCI6Imhkc3ZpZGlAZ21haWwuY29tIiwiaWF0IjoxNjk3NDQxMTM4LCJleHAiOjE2OTg2NTA3Mzh9.T419XciW3Xq75HktOwGXqCXeFE2NbHz1k0DEwieNaPE
 
-### update - user
-PATCH http://localhost:3000/user/update
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NTJjZDc4Njk4MzE3NGFjMDZjNWM5ZWUiLCJlbWFpbCI6Imhkc3ZpZGlAZ21haWwuY29tIiwiaWF0IjoxNjk3NDQxMTM4LCJleHAiOjE2OTg2NTA3Mzh9.T419XciW3Xq75HktOwGXqCXeFE2NbHz1k0DEwieNaPE
+### current - cek yourtoken valid (header format : Bearer <access token>)
+GET 18.182.65.154:3000/user/current
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6Ikp.eyJzdWIiOiI2NTJjZDc4Njk4MzE3NGFjMDZjNWM5ZWUiLCJlbWFpbCI6Imhkc3ZpZGlAZ21haWwuY29tIiwiaWF0IjoxNjk3NDQxMTM4LCJleHAiOjE2OTg2NTA3Mzh9.T419XciW3Xq75HktOwGXqCXeFE2NbHz1k0DEwieNaPE
+
+### update - user - change password
+PATCH 18.182.65.154:3000/user/update
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsIcCI6IkpXVCJ9.eyJzdWIiOiI2NTJjZDc4Njk4MzE3NGFjMDZjNWM5ZWUiLCJlbWFpbCI6Imhkc3ZpZGlAZ21haWwuY29tIiwiaWF0IjoxNjk3NDQxMTM4LCJleHAiOjE2OTg2NTA3Mzh9.T419XciW3Xq75HktOwGXqCXeFE2NbHz1k0DEwieNaPE
 Content-Type: application/json
 
 {
