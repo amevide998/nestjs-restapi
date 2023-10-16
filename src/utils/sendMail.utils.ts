@@ -29,9 +29,9 @@ export default async function sendMail (_id: string, uniqueString:string, email:
           <body>
           <div style='font-family: Arial, sans-serif; padding: 20px;'>
             <h2>Verify Your Email Address</h2>
-          <p>Dear ${email.split('@')[0].toString()},</p>
+          <p>Dear ${email.split( '@')[0].toString()},</p>
           <p>Thank you for signing up with bangun kota . To ensure the security of your account, please click the following link to verify your email address:</p>
-          <p><a href= ${currentUrl + "auth/verify/" + _id + "/" + uniqueString} style="background-color: #007BFF; color: #ffffff; padding: 10px 20px; text-decoration: none; border-radius: 4px;">Verify Email</a></p>
+          <p><a href=${currentUrl + "auth/verify/" + _id + "/" + uniqueString} style="background-color: #007BFF; color: #ffffff; padding: 10px 20px; text-decoration: none; border-radius: 4px;">Verify Email</a></p>
           <p>If you did not create an account with bangunkota , you can safely ignore this email.</p>
           <p>Thank you for your registration !</p>
           <p>Best regards,<br>The bangunkota Team</p>
