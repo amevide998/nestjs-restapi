@@ -28,15 +28,10 @@ export class AuthController{
   @HttpCode(HttpStatus.CREATED)
   @UsePipes(new ValidationPipe({transform: true}))
   async signup(@Body() createUserDto: CreateUserDto, @Res() res: Response ){
-    try {
       const result = await this.authService.create(createUserDto);
       return res.status(HttpStatus.CREATED)
         .json(new WebResponse(HttpStatus.CREATED, "success, please check your email to verify your account", result, null));
 
-    } catch (err) {
-      console.debug(`signup error : ${err}`)
-      throw new InternalServerErrorException(`Something bad happen`);
-    }
   }
 
   @Get("verify/:userId/:uniqueString")
